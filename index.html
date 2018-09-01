@@ -1,0 +1,38 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>IM-Tools</title>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons' rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/vuetify/dist/vuetify.min.css" rel="stylesheet">
+</head>
+<body>
+    <div id="vue-app">
+        <v-app>
+            <v-toolbar color="grey darken-4" dark>
+                <v-toolbar-title>IM-Tools</v-toolbar-title>
+                <v-spacer></v-spacer>
+                <v-toolbar-items>
+                    <v-btn flat>Home</v-btn>
+                    <v-btn flat>About</v-btn>
+                </v-toolbar-items>
+            </v-toolbar>
+            <v-container grid-list-md fluid>
+                <v-layout row wrap>
+                    <template v-for="m in menu">
+                        <v-flex xs3>
+                            <v-card>
+                                <v-btn block color="pink" dark>{{m.name}}</v-btn>
+                            </v-card>
+                        </v-flex>
+                    </template>
+                </v-layout>
+            </v-container>
+        </v-app>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vuetify/dist/vuetify.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>
